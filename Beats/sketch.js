@@ -1,23 +1,5 @@
-/**
- *  This technique tracks a beatThreshold level.
- *  
- *  When the current volume exceeds the beatThreshold, we have a beat, and
- *  "debounce" to ensure each beat only triggers once.
- *  
- *  When a beat is detected, we do two things to "debounce":
- *   - Increase the threshold, so that we don't get another
- *     beat right away, by adding a beatCutoff to the beatThreshold.
- *     The beatCutoff decays back to beatThreshold level at beatDecayRate.
- *   - Wait a certain amount of time before detecting another beat. This is
- *     accomplished by tracking framesSinceLastBeat > beatHoldFrames.
- *
- *  Each run through the Draw loop, the detectBeat() function decides
- *  whether we have a beat or not based on these Beat Detect Variables
- *  and the current amplitude level. 
- *  
- *  Thank you to Felix Turner's "Simple Beat Detection"
- *  http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/
- */
+//LONGHORN VISUALIZER
+//BY: BELLA SHAH
 
 var soundFile;
 var amplitude;
